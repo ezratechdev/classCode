@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show</title>
+</head>
+<body>
+    <script>
+        const data = sessionStorage.getItem("credentials")
+        const {username , password} = JSON.parse(data);
+        let paragraphData = `Username is ${username} and password is ${password}`
+        const newp = document.createElement("p");
+        newp.innerHTML  = paragraphData;
+        document.getElementsByTagName("body")[0].appendChild(newp)
+    </script>
+</body>
+</html>

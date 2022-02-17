@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        textarea{
+            border: none;
+            outline: none;
+            background-color: #767676;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 1rem;
+            text-align: center;
+        }
+        .main button{
+            height: 40px;
+            padding: 1rem;
+            font-weight: bold;
+            font-size: 1rem;
+            border-radius: 1rem;
+            border: none;
+            outline: none;
+            text-align: center;
+        }
+        .main button:hover{
+            background-color: #0099bc;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="mainer">
+            <textarea placeholder="Story of my life ..." name="textarea" id="" cols="30" rows="10" autofocus="on"></textarea>
+            <br>
+            <button onclick="alert((new Date()))">Click Me</button>
+        </div>
+        <div class="mainer1">
+            <input list="cars">
+            <datalist id="cars">
+                <option value="Toyota"></option>
+                <option value="Sedan"></option>
+                <option value="Nissan"></option>
+                <option value="Honda"></option>
+            </datalist>
+        </div>
+        <div class="mainer2">
+            <form action="/" target="_blank">
+                <fieldset>
+                    <legend>Login</legend>
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" placeholder="Username">
+                    <br>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Password">
+                </fieldset>
+                <fieldset>
+                    <legend>Login</legend>
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" placeholder="Username">
+                    <br>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Password">
+                </fieldset>
+            </form>
+        </div>
+        <div class="mainer3">
+            <marquee behavior="" direction="left">
+                <p>Dedan Kimathi</p>
+            </marquee>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>

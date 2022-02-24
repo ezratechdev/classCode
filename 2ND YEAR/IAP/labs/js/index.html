@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--  -->
+    </head>
+    <body>
+        <p id="pelem"></p>
+        <button id="belem">Click me</button>
+        <div>
+            <img src="./images/one.png" width="300px" height="300px" id="imager" alt="I am an image">
+            <button id="imageTogler">Toggle Image</button>
+        </div>
+        <script>
+            const belem = document.getElementById("belem")
+            belem.addEventListener("click" , event =>{
+                document.getElementById("pelem").innerHTML = "Hello from js";
+            })
+            // image
+            const imager =document.getElementById("imager")
+            const imageTogler = document.getElementById("imageTogler")
+            imageTogler.addEventListener("click" , event =>{
+                if(imager.src == "file:///home/ezra/coding/classCode/2ND%20YEAR/IAP/labs/js/images/one.png"){
+                    imager.src = "file:///home/ezra/coding/classCode/2ND%20YEAR/IAP/labs/js/images/two.png"
+                }else imager.src = "file:///home/ezra/coding/classCode/2ND%20YEAR/IAP/labs/js/images/one.png"
+            })
+        </script>
+    </body>
+</html>

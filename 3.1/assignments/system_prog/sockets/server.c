@@ -6,7 +6,7 @@
 
 const char message[] = "hello, world\n";
 
-int main()
+void main()
 {
   int sock = 0;
   int port = 0;
@@ -56,5 +56,4 @@ int main()
     close(childSocket);
   }
 
-  return 0;
 }

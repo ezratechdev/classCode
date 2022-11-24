@@ -6,7 +6,7 @@
 #include <unistd.h>
 #include <arpa/inet.h>
 
-int main(int argc, char* argv[])
+void main(int argc, char* argv[])
 {
   int sock = 0;
   int port = 0;
@@ -39,5 +39,4 @@ int main(int argc, char* argv[])
 
   close(sock);
 
-  return 0;
 }

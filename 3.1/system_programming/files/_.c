@@ -18,6 +18,10 @@ fclose() -> takes in one argument : the file path
 /*
 fgets() -> takes in three arguments : the string variable , the length of string , the file path
 */
+
+/*
+fseek() -> takes in three arguments : the string variable , the length of string , the file path
+*/
 void read_file_func(FILE *text_file){
     char data[1000];
 
@@ -50,7 +54,6 @@ void write_to_file(FILE *text_file){
         fputs(string_to_write , text_file );
         fputs("\n" ,text_file);
         printf("File has been written");
-        // read_file_func(text_file);
     }
     fclose(text_file);
 }
@@ -71,8 +74,16 @@ void append_to_file(FILE *text_file){
     }
     fclose(text_file);
 }
-void delete_file(FILE *text_file){
+
+
+void seek_file(FILE *text_file){
     // 
+    text_file = fopen("test.txt" , "w+");
+    fprintf(text_file ,"%s" , "\n Seeking--");
+    fseek(text_file , 5 , SEEK_SET);
+    fputs("Seeking---\n" ,text_file);
+    // printf("\n seeked" ,text_file);
+    fclose(text_file);
 }
 
 
@@ -80,7 +91,7 @@ void delete_file(FILE *text_file){
 void main(){
     FILE *test_file_pointer;
     int options;
-    printf("Choose an option to perform\n1:Read\n2:Write\n3:Append\n");
+    printf("Choose an option to perform\n1:Read\n2:Write\n3:Append\n4.Seek\n");
     scanf("%d",&options);
     if(options == 1){
         read_file_func(test_file_pointer);
@@ -91,6 +102,10 @@ void main(){
     } else if(options == 3){
         // append data to a file
         append_to_file(test_file_pointer);
+    } else if( options == 4){
+        seek_file(test_file_pointer);
+    }else{
+        printf("valid action not chosen Exiting\n");
     }
 }
 

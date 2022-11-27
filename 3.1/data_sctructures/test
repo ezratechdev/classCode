@@ -1,0 +1,3 @@
+
+echo "HI man" | base64 >> test.txt
+
